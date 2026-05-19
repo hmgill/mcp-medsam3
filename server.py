@@ -46,7 +46,7 @@ def _modal_dispatch(image_id: str, image_b64: str, prompt: str, threshold: float
     if not MODAL_ENDPOINT_URL:
         raise RuntimeError("MODAL_ENDPOINT_URL is not set.")
 
-    url = f"{MODAL_ENDPOINT_URL}/api"
+    url = f"{MODAL_ENDPOINT_URL}"
     logger.info(f"[{image_id}] Dispatching to Modal: {url}")
 
     resp = requests.post(
